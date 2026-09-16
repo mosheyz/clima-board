@@ -1,9 +1,14 @@
-import React from 'react'
+import React from "react";
+import FavoritesList from "../components/FavoritesList";
+import useExplorerName from "../store/useExplorerName";
 
 const FavoritesPage = () => {
-  return (
-    <div>FavoritesPage</div>
-  )
-}
+    const { explorerName } = useExplorerName();
+    return (
+        <div>
+            <FavoritesList name={explorerName}/>
+        </div>
+    );
+};
 
-export default FavoritesPage
+export default FavoritesPage;

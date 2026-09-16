@@ -32,7 +32,7 @@ const SearchPage = () => {
     };
 
     const handleCityClick = (city: any) =>{
-      return navigate(`/app/cities/${city.name}`, {state: city})
+      return navigate(`/app/cities/${city.name}`, {state: {city}})
     }
 
     return (

@@ -1,7 +1,7 @@
 import axios from "axios";
 const URL = "http://localhost:8000";
 
-type City = {
+export type City = {
     longitude: number;
     latitude: number;
     name: string;
@@ -75,9 +75,9 @@ export const atbash = async (text: string) => {
     return result.data;
 };
 
-try {
-    console.log(
-        await atbash(""),
+// try {
+//     console.log(
+//         await atbash(""),
         // await getWeatherWeekly({ longitude: 35.496, latitude: 32.96465 }),
         // await deleteCityFromFavorites("hanan", {longitude: 35.496, latitude: 32.96465})
         // await getFavorites("hanan")
@@ -118,7 +118,7 @@ try {
         //     longitude: 35.496,
         //     latitude: 32.96465,
         // }),
-    );
-} catch (error) {
-    console.error({ error });
-}
+//     );
+// } catch (error) {
+//     console.error({ error });
+// }

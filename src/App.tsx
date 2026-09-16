@@ -1,6 +1,5 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import "./App.css";
-import { Header } from "./components/Header";
 import LayoutPage from "./LayoutPage";
 import { HomePage } from "./pages/HomePage";
 import FavoritesPage from "./pages/FavoritesPage";
@@ -23,7 +22,7 @@ function App() {
                             <Route path="/app/search" element={<SearchPage/>} />
                             <Route path="/app/compare" element={<ComparePage/>} />
                             <Route path="/app/dashboard" element={<DashboardPage/>} />
-                            <Route path="/app/city/:id" element={<CityDetailsPage/>} />
+                            <Route path="/app/cities/:id" element={<CityDetailsPage/>} />
                         </Route>
                         <Route path="*" element={<NotFoundPage/>} />
                     </Route>
