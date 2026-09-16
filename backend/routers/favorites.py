@@ -20,8 +20,8 @@ def add_to_favorites(city: AddCity):
 
 
 @router.delete("")
-def delete_city(name:str, long: float, lat: float):
-    result = remove_city(long, lat)
+def delete_city(name:str, longitude: float, latitude: float):
+    result = remove_city(name, longitude, latitude)
     if not result:
         raise HTTPException(404, "Not found")
     return result

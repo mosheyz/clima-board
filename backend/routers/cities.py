@@ -1,5 +1,5 @@
 from fastapi import APIRouter
-from services.cities_service import get_cities, compare_cities
+from services.cities_service import compare_cities, get_cities
 
 router = APIRouter()
 

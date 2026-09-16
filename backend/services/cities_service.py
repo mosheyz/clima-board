@@ -7,15 +7,15 @@ def get_cities(city):
     params = {"name": city, "count": 10, "language": "en", "format": "json"}
     res = requests.get(url, params=params).json()
     if not "results" in res:
-        return []
+        res["results"] = []
     return res
 
 
 def compare_cities(long1: float, lat1: float, long2: float, lat2: float):
     url = "https://api.open-meteo.com/v1/forecast"
     params = {
-        "latitude": [long1, long2],
-        "longitude": [lat1, lat2],
+        "latitude": [lat1, lat2],
+        "longitude": [long1, long2],
         "current": [
             "temperature_2m",
             "is_day",

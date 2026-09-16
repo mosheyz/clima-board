@@ -21,10 +21,10 @@ def add_city(city):
     return True
 
 
-def remove_city(name, long, lat):
+def remove_city(name, longitude, latitude):
     data = read_from_json()
     for c in data[name]:
-        if c["longitude"] == long and c["latitude"] == lat:
+        if c["longitude"] == longitude and c["latitude"] == latitude:
             data[name].remove(c)
             write_to_json(data)
             return True
